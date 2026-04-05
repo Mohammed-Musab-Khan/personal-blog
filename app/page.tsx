@@ -1,3 +1,4 @@
+import Favourites from "@/components/favourites";
 import Hero from "@/components/hero";
 import Skills from "@/components/skills";
 
@@ -7,6 +8,7 @@ export default function Page() {
     <div>
       <Hero />
       <Skills />
+      <Favourites />
     </div>
   )
 }

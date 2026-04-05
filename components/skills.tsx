@@ -43,9 +43,9 @@ const Skills = () => {
     ]
 
     return (
-        <div>
+        <div className='p-10'>
             <h2 className='text-2xl flex justify-center items-center'> <IconChalkboardTeacher className='m-2' /> Skills</h2>
-            <div className='p-10 grid grid-cols-2 gap-10'>
+            <div className='grid grid-cols-2 max-w-11/12 lg:grid-cols-3 lg:min-w-2/3 gap-10 justify-self-center'>
                 {
                     skills.map(item => (
                         <div key={item.id}>
