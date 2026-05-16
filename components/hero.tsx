@@ -7,13 +7,14 @@ const Hero = () => {
             <div className="relative flex flex-col items-center">
                 <Image src={"/assets/images/hero-background.jpg"} alt="Background Image" className="w-full h-72 object-cover" width={700} height={100} />
 
-                <Image src={"/assets/images/hero-profile.jpg"} alt="Profile Image" className="absolute bottom-0 translate-y-1/2 rounded-full border-8 border-amber-300 w-50 h-50 shadow-2xl" width={600} height={100} />
+                <Image src={"/assets/images/hero-profile.jpg"} alt="Profile Image" className="absolute bottom-0 translate-y-1/2 rounded-full border-8 border-amber-300 w-50 h-50 shadow-2xl hover:shadow-amber-600" width={600} height={100} />
             </div>
-
-            <p className="p-13 px-10">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, et repellendus rem nobis blanditiis, mollitia, corrupti doloremque quam dicta laboriosam natus corporis dolore dolorem vitae. Modi blanditiis nulla maxime quidem!
-                Veritatis doloribus saepe culpa corporis tempore? Cumque voluptas illo quia veritatis doloribus repellat iste nisi accusantium pariatur eum aspernatur quaerat provident non, nesciunt temporibus excepturi quisquam qui nostrum id ut!
-            </p>
+            <div>
+                <h1 className='justify-self-center gap-0 text-3xl font-extrabold'>Mohammed Musab Khan</h1>
+                <p className="lg:p-8 lg:px-10 p-5">
+                    Mohammed Musab Khan is a Senior Software Engineer based in Mumbai with over 5 years of experience in building scalable web applications using .NET technologies, including ASP.NET Core and Blazor, along with modern frameworks like React.js. He has worked across development and testing roles, giving him a strong understanding of full software lifecycles, API development, and backend systems. A graduate in Information Technology from Mumbai University, he actively shares insights on software architecture and engineering practices, and is engaged in hiring, referrals, and exploring new opportunities in tech.
+                </p>
+            </div>
 
         </div>
     )

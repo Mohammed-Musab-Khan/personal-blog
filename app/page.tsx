@@ -1,5 +1,7 @@
+import Education from "@/components/education";
 import Favourites from "@/components/favourites";
 import Hero from "@/components/hero";
+import Portfolio from "@/components/portfolio";
 import Skills from "@/components/skills";
 
 
@@ -9,6 +11,8 @@ export default function Page() {
       <Hero />
       <Skills />
       <Favourites />
+      <Education />
+      <Portfolio />
     </div>
   )
 }

@@ -11,11 +11,12 @@ interface FavouriteProps {
 }
 
 export const FavouriteInfo = ({ param }: { param: FavouriteProps }) => {
-    const orderInfo = param.id % 2 == 0 ? "order-1" : "order-2"
-    const orderImage = param.id % 2 == 0 ? "order-2" : "order-1"
+    const orderInfo = param.id % 2 == 0 ? "lg:order-1" : "lg:order-2"
+    const orderImage = param.id % 2 == 0 ? "lg:order-2" : "lg:order-1"
     return (
         <>
-            <div className="grid grid-cols-2 gap-20">
+            <div className="grid lg:grid-cols-2 gap-20 hover:shadow-2xl hover:shadow-current rounded-3xl lg:p-10 p-5 border-2">
+                <Image src={param.image} width={450} height={300} alt='Football' className={`${orderImage} hover:shadow-2xl hover:shadow-purple-500`} />
                 <div className={`flex flex-col gap-10 text-center ${orderInfo}`}>
                     <h3 className='text-xl font-extrabold'>{param.title}</h3>
                     <h4 className='text-xl font-bold'>{param.subtitle}</h4>
@@ -23,7 +24,6 @@ export const FavouriteInfo = ({ param }: { param: FavouriteProps }) => {
                         {param.paragraph}
                     </p>
                 </div>
-                <Image src={param.image} width={450} height={300} alt='Football' className={`${orderImage}`} />
             </div>
         </>
     )
@@ -54,11 +54,16 @@ const Favourites = () => {
         }
     ]
     return (
-        <div className="p-10 grid gap-10 justify-items-center">
-            <h2 className='text-2xl flex justify-center items-center'> <IconStar className='m-2' /> Favorites</h2>
-            {favourites.map(item => (
-                <FavouriteInfo param={item} key={item.id} />
-            ))}
+        <div className="lg:p-10 p-5 grid gap-10 justify-items-cent">
+            <h2 className='text-2xl flex justify-center items-center'>
+                <IconStar className='m-2' /> Favorites
+            </h2>
+            <div className='flex flex-col gap-2'>
+                {favourites.map(item => (
+                    <FavouriteInfo param={item} key={item.id} />
+                ))}
+            </div>
+
         </div>
     )
 }

@@ -43,14 +43,14 @@ const Skills = () => {
     ]
 
     return (
-        <div className='p-10'>
+        <div className='lg:p-10 p-5'>
             <h2 className='text-2xl flex justify-center items-center'> <IconChalkboardTeacher className='m-2' /> Skills</h2>
             <div className='grid grid-cols-2 max-w-11/12 lg:grid-cols-3 lg:min-w-2/3 gap-10 justify-self-center'>
                 {
                     skills.map(item => (
                         <div key={item.id}>
                             <h1>{item.skill}</h1>
-                            <Progress value={item.percent} color={`${item.color}`} className={`h-10`} />
+                            <Progress value={item.percent} color={`${item.color}`} className={"h-10 hover:shadow-2xl hover:shadow-amber-300"} />
                         </div>
                     ))
                 }
